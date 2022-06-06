@@ -1,128 +1,126 @@
 /* Add a black background color to the top navigation */
-body{
-    background-color: rgb(16, 1, 1);
-    z-index: 100;
+body {
+  background-color: rgb(16, 1, 1);
 }
 /* Style the navigation bar */
 .navbar {
-    width: 100%;
-    background-color: rgb(16,1,1);
-    top: 0%;
-    position: fixed;
-    z-index: -1;
-    font-family: 'Brush Script MT', cursive;
-  }
-  
-  /* Navbar links */
+  width: 100%;
+  background-color: rgb(16, 1, 1);
+  top: 0%;
+  position: fixed;
+  z-index: 1;
+  font-family: "Brush Script MT", cursive;
+}
 
+/* Navbar links */
 
+.navbar a {
+  float: right;
+  text-align: center;
+  padding: 17px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding-top: 25px;
+  margin-right: 20px;
+}
+
+/* Navbar links on mouse-over */
+
+.navbar a.remark {
+  float: left;
+  padding-top: 12px;
+  padding-left: 120px;
+  font-size: 35px;
+
+  background-color: rgb(16, 1, 1);
+}
+.navbar a:hover {
+  color: black;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
   .navbar a {
-    float: right;
-    text-align: center;
-    padding: 17px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    padding-top: 25px;
-    margin-right: 20px;
-    
-  }
-  
-  /* Navbar links on mouse-over */
-
-  .navbar a.remark{
-    float: left;
-    padding-top: 12px;
-    padding-left: 120px;
-    font-size: 35px;
-
-    background-color: rgb(16,1,1);
-}
-.navbar a:hover{
-    color: black;
-}
-
-
-  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-  @media screen and (max-width: 500px) {
-    .navbar a {
-      float: none;
-      display: block;
-    }
-  }
-
-
-
-  .overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
-  }
-  
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
+    float: none;
     display: block;
-    transition: 0.3s;
   }
-  
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
   }
-  
+  .overlay a {
+    font-size: 20px;
+  }
   .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
-    }
   }
+}
 
+/* Main page mains class*/
+.mained {
+  position: absolute;
+  top: 11vw;
+  left: 10vw;
+  background-color: rgb(16, 1, 1);
+}
 
-  /* Main page mains class*/
-  .mained{
-      position: absolute;
-      top: 11vw;
-      left: 10vw;
-      background-color: rgb(16,1,1);
-  }
+.first_text {
+  color: white;
+  position: absolute;
+  top: 12vw;
+  left: 50vw;
+  right: 150px;
 
-.first_text{
-    color: white;
-    position: absolute;
-    top: 12vw;
-    left: 50vw;
-    right: 150px;
-  
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Brush Script MT', cursive;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Brush Script MT", cursive;
 }
 /*floating text*/
 .floating {
@@ -139,36 +137,47 @@ body{
 }
 
 @-webkit-keyframes Floatingx {
-  from {-webkit-transform:translate(0, 0px);}
-  65% {-webkit-transform:translate(0, 15px);}
-  to {-webkit-transform: translate(0, -0px);}    
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 15px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+  }
 }
 
 @-moz-keyframes Floating {
-  from {-moz-transform:translate(0, 0px);}
-  65% {-moz-transform:translate(0, 15px);}
-  to {-moz-transform: translate(0, -0px);}    
+  from {
+    -moz-transform: translate(0, 0px);
+  }
+  65% {
+    -moz-transform: translate(0, 15px);
+  }
+  to {
+    -moz-transform: translate(0, -0px);
+  }
 }
 
 .mained2 {
   position: absolute;
   top: 65vw;
   left: 58vw;
-  background-color: rgb(16,1,1);
+  background-color: rgb(16, 1, 1);
 }
 
-.second_text{
+.second_text {
   color: white;
   position: absolute;
   top: 1000px;
   left: 50px;
   padding-right: 40vw;
   font-size: 40px;
-  font-family: 'Brush Script MT', cursive;
+  font-family: "Brush Script MT", cursive;
 }
 
-.bottom-email{
-  
+.bottom-email {
   color: white;
   position: absolute;
   top: 2800px;
@@ -177,7 +186,7 @@ body{
   width: 400px;
 }
 
-.input{
+.input {
   position: absolute;
   width: 300px;
   height: 40px;
@@ -187,7 +196,7 @@ body{
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   font-size: 24px;
   padding: 20px;
@@ -205,7 +214,7 @@ body{
 }
 
 .button span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -223,15 +232,14 @@ body{
 }
 
 /*Choice making*/
-.choice{
+.choice {
   background-color: rgb(16, 1, 1);
   position: absolute;
   display: flex;
-  top : 1900px;
+  top: 1900px;
   left: 65px;
   width: 1300px;
   height: 500px;
-  
 }
 
 .choice > div {
@@ -240,7 +248,7 @@ body{
   font-size: 30px;
 }
 .imghovers:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-        
-        
